@@ -1,41 +1,76 @@
-# Compiled Lua sources
-luac.out
+```
+# Lua-specific compiled files
+*.luac
+?.*un~
+*~.nib
+*.lnk
+core
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
-
-# Object files
+# General binary/compiled files
 *.o
-*.os
-*.ko
 *.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
-
-# Shared objects (inc. Windows DLLs)
+*.exe
 *.dll
 *.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
+*.a
 *.out
-*.app
-*.i*86
-*.x86_64
-*.hex
 
+# Dependencies
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+node_modules/
+venv/
+.venv/
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.env.*
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```
