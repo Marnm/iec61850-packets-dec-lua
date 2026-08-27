@@ -322,8 +322,14 @@ function iec61850_proto.dissector(buffer, pinfo, tree)
     local subtree = tree:add(iec61850_proto, buffer(), "IEC 61850 Protocol")
     
     -- Determine protocol type based on port or packet characteristics
-    local src_port = pinfo.src_port
-    local dst_port = pinfo.dest_port
+    -- Check if pinfo has src_port and dest_port methods (only for TCP/UDP)
+    local src_port, dst_port
+    if pinfo.src_port then
+        src_port = pinfo.src_port
+    end
+    if pinfo.dest_port then
+        dst_port = pinfo.dest_port
+    end
     
     -- Check for GOOSE (typically Ethernet type 0x88B8, but we check packet structure)
     -- GOOSE packets usually start with APPID in range 0x0000-0x3FFF
