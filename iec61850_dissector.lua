@@ -410,5 +410,5 @@ set_plugin_info({
     repository = "https://github.com/iec61850/wireshark-plugin"
 })
 
--- Debug output when plugin loads
-debug_info("IEC 61850 plugin loaded successfully")
+-- Debug output when plugin loads (use print for Wireshark Lua)
+-- debug("IEC 61850 plugin loaded successfully")
